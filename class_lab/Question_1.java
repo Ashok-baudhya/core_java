@@ -17,5 +17,4 @@ public class Question_1 {
 		Question_1 obj2= new Question_1(2, "Atul");
 
 	}
-
 }

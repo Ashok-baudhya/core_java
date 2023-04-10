@@ -1,13 +1,5 @@
 package class_lab;
-
-
-
 import java.util.Scanner;
-
-/*
- *  wap to ask 6 employee record from  user using get and display method
- *  show record on console after performing sorting on record on basis of employee id.
- */
 class Employee1
 {
 	String name;
@@ -16,7 +8,7 @@ class Employee1
 	void get()
 	{
 		Scanner s= new Scanner(System.in);
-		System.out.println("enter name ,empid salary");
+		System.out.println("Enter name ,Empid ,Salary");
 		name= s.next();
 		empid= s.nextInt();
 		salary=s.nextInt();
@@ -32,15 +24,15 @@ class Employee1
 	{
 		Employee1 temp= new Employee1();
 		
-		for(int i=0;i<k.length;i++)
+		for(int i=0;i<k.length-1;i++)
 		{
 			for(int j=0;j<k.length-1-i;j++)
 			{
-				if(k[i].salary> k[i+1].salary)
+				if(k[j].empid> k[j+1].empid)
 				{
-					temp= k[i];
-					k[i]=k[i+1];
-					k[i+1]=temp;
+					temp= k[j];
+					k[j]=k[j+1];
+					k[j+1]=temp;
 				}
 			}
 		}
@@ -56,11 +48,14 @@ public class Employee_Record{
 		for(int i=0;i<e.length;i++)
 		{
 			e[i]= new Employee1();
+			System.out.print((i+1)+" ");
 			e[i].get();
 			
 		}
 		
 		m.sort(e);
+		
+		System.out.println("After sorting on the basis of Emp ID");
 		for(int i=0;i<e.length;i++)
 		{
 			e[i].display();

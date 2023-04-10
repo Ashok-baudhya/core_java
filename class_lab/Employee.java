@@ -13,7 +13,8 @@ public class Employee {
 	public void AddSal() {
 		if(salary<50000)
 		{
-			System.out.println("After Adding 10000 in salary = "+(salary+10000));
+			salary+=10000;
+			System.out.println("After Adding 10000 in salary = "+salary);
 		}
 		else {
 			System.out.println("Employee salary greater than 50000 = "+salary);
@@ -45,5 +46,4 @@ public class Employee {
 		ep.AddWork();
 		
 	}
-
 }
